@@ -1,4 +1,4 @@
-import '../entities/user.dart';
+import '../entitiy/user.dart';
 
 class UserDto {
   late String username;

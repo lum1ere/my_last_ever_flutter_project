@@ -1,7 +1,7 @@
 import 'package:market_of_ment/dto/login_dto.dart';
 import 'package:market_of_ment/dto/user_dto.dart';
-import 'package:market_of_ment/entities/user.dart';
 import 'package:uuid/uuid.dart';
+import '../entitiy/user.dart';
 
 
 class UserRepository {
@@ -25,8 +25,8 @@ class UserRepository {
 
     User user = User(
       id: Uuid().v1(),
-      username: 'admin',
-      password: '123321',
+      username: 'q',
+      password: 'q',
       email: 'admin@mail.ru',
       fname: 'admin',
       lname: 'admin',
@@ -37,7 +37,7 @@ class UserRepository {
     users.add(user);
   }
 
-  void register(UserDto dto) {
+  void add(UserDto dto) {
     User newUser = User(
         id:Uuid().v1(),
         username: dto.username,
@@ -52,7 +52,7 @@ class UserRepository {
     users.add(newUser);
   }
 
-  bool login(LoginDto dto) {
+  bool check(LoginDto dto) {
     for (User user in users) {
       if (user.username == dto.username && user.password == dto.password) {
         isAuthorized = true;
@@ -61,6 +61,14 @@ class UserRepository {
       }
     }
     return false;
+  }
+
+  User? findByUsername(String username) {
+    for (User user in users) {
+      if (user.username == username) {
+        return user;
+      }
+    }
   }
 
 }
