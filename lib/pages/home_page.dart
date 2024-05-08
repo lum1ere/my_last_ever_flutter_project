@@ -1,9 +1,11 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import 'package:market_of_ment/entities/item.dart';
+import 'package:market_of_ment/entitiy/item.dart';
+import 'package:market_of_ment/pages/auth_page.dart';
+import 'package:market_of_ment/pages/cart_page.dart';
 import 'package:market_of_ment/repositories/item_repository.dart';
-import 'package:market_of_ment/components/external_card.dart';
+import 'package:market_of_ment/component/external_card.dart';
 
 class HomePage extends StatefulWidget {
   ItemRepository itemRepository = ItemRepository.getInstance();
@@ -25,13 +27,13 @@ class _HomePageState extends State<HomePage> {
           title: const Center(child: Text('Магазин')), backgroundColor: Colors.blueAccent),
       backgroundColor: Colors.white,
       body: Container(
-        margin: const EdgeInsets.all(30),
+        margin: const EdgeInsets.all(10),
         child: GridView.builder(
             gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-                maxCrossAxisExtent: 500,
-                mainAxisSpacing: 30,
-                crossAxisSpacing: 30,
-                mainAxisExtent: 400
+                maxCrossAxisExtent: 270,
+                mainAxisSpacing: 20,
+                crossAxisSpacing: 20,
+                mainAxisExtent: 220
             ),
             itemCount: items.length,
             itemBuilder: (BuildContext ctx, index) {
@@ -60,8 +62,10 @@ class _HomePageState extends State<HomePage> {
   }
 
   void _onBottomBarTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
+    switch (index) {
+      case 0: Navigator.push(context, MaterialPageRoute(builder: (context) => const AuthPage())); break;
+      case 2: Navigator.push(context, MaterialPageRoute(builder: (context) => const CartPage()));
+    }
+
   }
 }

@@ -1,10 +1,11 @@
 import 'package:decimal/decimal.dart';
-import 'package:market_of_ment/entities/item.dart';
+import 'package:market_of_ment/entitiy/item.dart';
 
 class ExampleSource {
   static List<Item> getExampleItems() {
     List<Item> items = [
       Item.builder()
+          .setId(0)
           .setTitle('Title 1')
           .setDesc('''
 Donsectetur adipiscing elit. Proin sodales, magna ac volutpat faucibus, orci orci tempor augue, a interdum est risus nec est. Curabitur porta aliquam iaculis. Nam nec feugiat mi, eu tempus arcu. Phasellus sagittis ullamcorper nisi, nec varius lorem commodo at. Aliquam quis ipsum efficitur, luctus quam ut, eleifend leo. Curabitur blandit ornare quam ut volutpat. Curabitur cursus nisi eros, eu malesuada augue maximus sed. Mauris risus mauris, pharetra ut maximus id, placerat ac magna.
@@ -29,6 +30,7 @@ Curabitur tellus urna, pretium scelerisque sodales et, congue semper lacus. Quis
           .build(),
 
       Item.builder()
+          .setId(1)
           .setTitle('Title 2')
           .setDesc('Desc 2')
           .setImagePath('https://cdn.britannica.com/22/215522-050-8315BB78/green-grass-close-up.jpg')
@@ -39,6 +41,7 @@ Curabitur tellus urna, pretium scelerisque sodales et, congue semper lacus. Quis
           .build(),
 
       Item.builder()
+          .setId(2)
           .setTitle('Title 3')
           .setDesc('Desc 3')
           .setImagePath('https://cdn.britannica.com/22/215522-050-8315BB78/green-grass-close-up.jpg')
@@ -49,6 +52,7 @@ Curabitur tellus urna, pretium scelerisque sodales et, congue semper lacus. Quis
           .build(),
 
       Item.builder()
+          .setId(3)
           .setTitle('Title 4')
           .setDesc('Desc 4')
           .setImagePath('https://cdn.britannica.com/22/215522-050-8315BB78/green-grass-close-up.jpg')
@@ -59,6 +63,7 @@ Curabitur tellus urna, pretium scelerisque sodales et, congue semper lacus. Quis
           .build(),
 
       Item.builder()
+          .setId(4)
           .setTitle('Title 5')
           .setDesc('Desc 5')
           .setImagePath('https://cdn.britannica.com/22/215522-050-8315BB78/green-grass-close-up.jpg')
@@ -69,6 +74,7 @@ Curabitur tellus urna, pretium scelerisque sodales et, congue semper lacus. Quis
           .build(),
 
       Item.builder()
+          .setId(5)
           .setTitle('Title 6')
           .setDesc('Desc 6')
           .setImagePath('https://cdn.britannica.com/22/215522-050-8315BB78/green-grass-close-up.jpg')
@@ -79,6 +85,7 @@ Curabitur tellus urna, pretium scelerisque sodales et, congue semper lacus. Quis
           .build(),
 
       Item.builder()
+          .setId(6)
           .setTitle('Title 7')
           .setDesc('Desc 7')
           .setImagePath('https://cdn.britannica.com/22/215522-050-8315BB78/green-grass-close-up.jpg')
@@ -89,6 +96,7 @@ Curabitur tellus urna, pretium scelerisque sodales et, congue semper lacus. Quis
           .build(),
 
       Item.builder()
+          .setId(7)
           .setTitle('Title 8')
           .setDesc('Desc 8')
           .setImagePath('https://cdn.britannica.com/22/215522-050-8315BB78/green-grass-close-up.jpg')
@@ -99,6 +107,7 @@ Curabitur tellus urna, pretium scelerisque sodales et, congue semper lacus. Quis
           .build(),
 
       Item.builder()
+          .setId(8)
           .setTitle('Title 9')
           .setDesc('Desc 9')
           .setImagePath('https://cdn.britannica.com/22/215522-050-8315BB78/green-grass-close-up.jpg')
@@ -109,6 +118,7 @@ Curabitur tellus urna, pretium scelerisque sodales et, congue semper lacus. Quis
           .build(),
 
       Item.builder()
+          .setId(9)
           .setTitle('Title 10')
           .setDesc('Desc 10')
           .setImagePath('https://cdn.britannica.com/22/215522-050-8315BB78/green-grass-close-up.jpg')
@@ -119,6 +129,7 @@ Curabitur tellus urna, pretium scelerisque sodales et, congue semper lacus. Quis
           .build(),
 
       Item.builder()
+          .setId(10)
           .setTitle('Title 11')
           .setDesc('Desc 11')
           .setImagePath('https://cdn.britannica.com/22/215522-050-8315BB78/green-grass-close-up.jpg')

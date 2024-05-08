@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:market_of_ment/components/inner_card.dart';
-import 'package:market_of_ment/entities/item.dart';
+import 'package:market_of_ment/component/inner_card.dart';
+import 'package:market_of_ment/entitiy/item.dart';
 
 class CardVIewPage extends StatelessWidget {
   final Item item;
