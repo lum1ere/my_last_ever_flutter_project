@@ -1,3 +1,5 @@
+import 'package:market_of_ment/entitiy/cart.dart';
+
 enum Gender {
   male,
   female,
@@ -14,6 +16,7 @@ class User {
   late Gender gender;
   late num age;
   late String password;
+  late Cart cart;
 
   User({
     required this.id,
@@ -23,6 +26,7 @@ class User {
     required this.lname,
     required this.age,
     required this.gender,
-    required this.password
+    required this.password,
+    required this.cart
   });
 }

@@ -1,5 +1,6 @@
 import 'package:market_of_ment/entitiy/user.dart';
 import 'package:market_of_ment/dto/user_dto.dart';
+import 'package:market_of_ment/entitiy/cart.dart';
 import 'package:market_of_ment/repositories/user_repository.dart';
 
 class AuthService {
@@ -7,6 +8,7 @@ class AuthService {
   User? userData;
   bool _authenticated = false;
   late UserRepository _userRepository;
+  Cart localCart = Cart();
 
   AuthService() {
     _userRepository = UserRepository.getInstance();
@@ -21,18 +23,24 @@ class AuthService {
     _userRepository.add(userData);
   }
 
-  void login(String username, String password) {
+  bool login(String username, String password) {
     User? user = _userRepository.findByUsername(username);
     if (user != null) {
       if (user.password == password) {
         userData = user;
         _authenticated = true;
+        return true;
       }
     }
+    return false;
   }
 
   User? getUserData() {
     return userData;
+  }
+
+  Cart getLocalCart() {
+    return localCart;
   }
 
   bool isAuthenticated() {

@@ -33,7 +33,7 @@ class _HomePageState extends State<HomePage> {
                 maxCrossAxisExtent: 270,
                 mainAxisSpacing: 20,
                 crossAxisSpacing: 20,
-                mainAxisExtent: 220
+                mainAxisExtent: 250
             ),
             itemCount: items.length,
             itemBuilder: (BuildContext ctx, index) {

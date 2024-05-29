@@ -17,9 +17,9 @@ class ItemRepository {
     return _instance!;
   }
 
-  Item? getById(num id) {
+  Item getById(num id) {
     Item? item = _items[id];
-    return item;
+    return item!;
   }
 
   List<Item> getAll() {

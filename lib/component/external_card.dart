@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:market_of_ment/entitiy/item.dart';
 import 'package:market_of_ment/pages/card_view_page.dart';
+import 'package:market_of_ment/service/auth_service.dart';
 
 class ExternalCard extends StatelessWidget {
   final Item item;
@@ -38,10 +39,18 @@ class ExternalCard extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.bottomCenter,
                     child: TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          AuthService service = AuthService.getInstance();
+                          if (service.isAuthenticated()) {
+                            service.userData!.cart.itemIds.add(item.id.toInt());
+                          }
+                          else {
+                            service.localCart.itemIds.add(item.id.toInt());
+                          }
+                        },
                         style: ButtonStyle(backgroundColor: MaterialStateColor.resolveWith((states) => Colors.white)),
                         child: Text('В корзину ${item.cost} ${item.currency}',
-                            style: const TextStyle(fontSize: 24))),
+                            style: const TextStyle(fontSize: 18))),
                   )),
             ),
           ],

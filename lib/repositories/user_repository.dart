@@ -1,5 +1,6 @@
 import 'package:market_of_ment/dto/login_dto.dart';
 import 'package:market_of_ment/dto/user_dto.dart';
+import 'package:market_of_ment/entitiy/cart.dart';
 import 'package:uuid/uuid.dart';
 import '../entitiy/user.dart';
 
@@ -32,6 +33,7 @@ class UserRepository {
       lname: 'admin',
       gender: Gender.undefined,
       age: 22,
+      cart: Cart()
     );
 
     users.add(user);
@@ -46,7 +48,8 @@ class UserRepository {
         lname: dto.lname,
         age: dto.age,
         gender: dto.gender,
-        password: dto.password
+        password: dto.password,
+        cart: Cart()
     );
 
     users.add(newUser);
@@ -69,6 +72,10 @@ class UserRepository {
         return user;
       }
     }
+  }
+
+  User? getCurrent() {
+    return authorizedUser;
   }
 
 }
