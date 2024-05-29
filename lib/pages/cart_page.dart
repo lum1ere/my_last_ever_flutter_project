@@ -65,7 +65,9 @@ class _CartPageState extends State<CartPage> {
                   subtitle: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(item.desc),
+                      Text(item.desc.length > 30
+                          ? item.desc.substring(0, 30) + '...'
+                          : item.desc),
                       SizedBox(height: 4.0),
                       Text('${item.cost.toString()} ${item.currency}'),
                     ],
