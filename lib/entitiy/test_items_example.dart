@@ -18,12 +18,12 @@ Sed accumsan urna non vulputate feugiat. Donec at molestie diam, sit amet malesu
 
 Curabitur tellus urna, pretium scelerisque sodales et, congue semper lacus. Quisque a nulla et eros fringilla lacinia quis et nisl. Phasellus non lectus enim. Phasellus a nisi molestie, aliquet neque varius, sagittis diam. Sed nulla eros, tincidunt vel pharetra nec, vehicula vel justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent vulputate sollicitudin velit, id scelerisque est commodo eu. Donec odio nisl, dignissim quis nibh fringilla, fermentum gravida neque. Nullam sit amet justo sodales est vestibulum porttitor vel et velit. Suspendisse vulputate magna sem, vel mollis massa feugiat vel. Proin convallis imperdiet odio. Pellentesque venenatis ante ex, eget ornare erat imperdiet eu. Nunc sodales velit nec risus varius, sit amet tempor nibh dictum. Nullam egestas metus eget tortor convallis, pulvinar sollicitudin odio congue. Donec sodales ornare justo non viverra.
           ''')
-          .setImagePath('https://cdn.britannica.com/22/215522-050-8315BB78/green-grass-close-up.jpg')
+          .setImagePath('https://ilfotografo.it/wp-content/uploads/2023/03/AdobeStock_64900250-1024x683.jpeg')
           .setStats('...')
           .setSliderImagePaths([
-        'https://cdn.britannica.com/22/215522-050-8315BB78/green-grass-close-up.jpg',
-        'https://cdn.britannica.com/22/215522-050-8315BB78/green-grass-close-up.jpg',
-        'https://cdn.britannica.com/22/215522-050-8315BB78/green-grass-close-up.jpg'
+        'https://ilfotografo.it/wp-content/uploads/2023/03/AdobeStock_64900250-1024x683.jpeg',
+        'https://ilfotografo.it/wp-content/uploads/2023/03/AdobeStock_64900250-1024x683.jpeg',
+        'https://ilfotografo.it/wp-content/uploads/2023/03/AdobeStock_64900250-1024x683.jpeg'
       ])
           .setCost(Decimal.fromInt(1000))
           .setCurrency("\$")
@@ -33,7 +33,7 @@ Curabitur tellus urna, pretium scelerisque sodales et, congue semper lacus. Quis
           .setId(1)
           .setTitle('Title 2')
           .setDesc('Desc 2')
-          .setImagePath('https://cdn.britannica.com/22/215522-050-8315BB78/green-grass-close-up.jpg')
+          .setImagePath('https://ilfotografo.it/wp-content/uploads/2023/03/AdobeStock_64900250-1024x683.jpeg')
           .setStats('...')
           .setSliderImagePaths([])
           .setCost(Decimal.fromInt(1000))
